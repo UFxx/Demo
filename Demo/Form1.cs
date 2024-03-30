@@ -15,31 +15,109 @@ namespace Demo
     public partial class Form1 : Form
     {
         List<AgencyWorker> workers = new List<AgencyWorker>();
+        List<Users> users = new List<Users>();
         SqlCommand sqlCommand;
         SqlConnection sqlConnection;
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        public void SelectWorkers()
         {
+            // Соединение с БД
+            sqlConnection = new SqlConnection("Data Source = DESKTOP-QID17OI\\SQLEXPRESS01; Initial Catalog = agency; Integrated Security = True");
+            sqlConnection.Open();
 
+            // Запрос к БД
+            sqlCommand = new SqlCommand("Select * From AgencyWorker", sqlConnection);
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            if (sqlDataReader.HasRows) 
+            {
+                while (sqlDataReader.Read())
+                {
+                    workers.Add(new AgencyWorker(Convert.ToString(sqlDataReader[10]), Convert.ToString(sqlDataReader[11])));
+                }
+            }
+
+            sqlDataReader.Close();
+        }
+
+        public void SelectUsers()
+        {
+            // Соединение с БД
+            sqlConnection = new SqlConnection("Data Source = DESKTOP-QID17OI\\SQLEXPRESS01; Initial Catalog = agency; Integrated Security = True");
+            sqlConnection.Open();
+
+            // Запрос к БД
+            sqlCommand = new SqlCommand("Select * From [User]", sqlConnection);
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            if (sqlDataReader.HasRows)
+            {
+                while (sqlDataReader.Read())
+                {
+                    users.Add(new Users(Convert.ToString(sqlDataReader[9]), Convert.ToString(sqlDataReader[10])));
+                }
+            }
+
+            sqlDataReader.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            SelectWorkers();
+            SelectUsers();
         }
 
-        private void login_textbox_TextChanged(object sender, EventArgs e)
+        private void sumbit_button_Click(object sender, EventArgs e)
         {
+            // Валидация поля ввода логина
+            if (!string.IsNullOrEmpty(login_textbox.Text) && !string.IsNullOrWhiteSpace(login_textbox.Text) 
+                && 
+            // Валидация поля ввода пароля
+                !string.IsNullOrEmpty(password_textbox.Text) && !string.IsNullOrWhiteSpace(password_textbox.Text))
+                {
+                    string login = login_textbox.Text;
+                    string password = password_textbox.Text;
+                    int tempForWorkers = 0;
+                    int tempForUsers = 0;
 
-        }
+                    // Перебор данных сотрудников
+                    for(int i = 0; i < workers.Count; i++)
+                    {
+                        if (workers[i].Login == login && workers[i].Password == password) 
+                        {
+                            Hide();
+                            WorkerPersonalAccount newForm = new WorkerPersonalAccount();
+                            newForm.ShowDialog();
+                            Close();
+                        } else tempForWorkers++;
+                    }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+                    // Перебор данных клиентов
+                    for (int i = 0; i < users.Count; i++)
+                    {
+                        if (users[i].Login == login && users[i].Password == password)
+                        {
+                            Hide();
+                            UserPersonalAccount newForm = new UserPersonalAccount();
+                            newForm.ShowDialog();
+                            Close();
+                        }
+                        else tempForUsers++;
+                    }
+
+                    if (tempForWorkers == workers.Count && tempForUsers == users.Count)
+                        {
+                            MessageBox.Show("Неправильный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+             else MessageBox.Show("Все данные должны быть заполнены", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

@@ -70,7 +70,6 @@
             this.login_textbox.Name = "login_textbox";
             this.login_textbox.Size = new System.Drawing.Size(216, 34);
             this.login_textbox.TabIndex = 1;
-            this.login_textbox.TextChanged += new System.EventHandler(this.login_textbox_TextChanged);
             // 
             // password_textbox
             // 
@@ -89,7 +88,6 @@
             this.app_info_label.Size = new System.Drawing.Size(372, 26);
             this.app_info_label.TabIndex = 0;
             this.app_info_label.Text = "Данная АИС предназначена для...";
-            this.app_info_label.Click += new System.EventHandler(this.label3_Click);
             // 
             // menuStrip2
             // 
@@ -127,6 +125,7 @@
             this.sumbit_button.TabIndex = 4;
             this.sumbit_button.Text = "Войти";
             this.sumbit_button.UseVisualStyleBackColor = true;
+            this.sumbit_button.Click += new System.EventHandler(this.sumbit_button_Click);
             // 
             // pictureBox1
             // 
@@ -137,7 +136,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(507, 301);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
