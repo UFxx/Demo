@@ -28,7 +28,7 @@ namespace Demo
         public void SelectWorkers()
         {
             // Соединение с БД
-            sqlConnection = new SqlConnection("Data Source = DESKTOP-QID17OI\\SQLEXPRESS01; Initial Catalog = agency; Integrated Security = True");
+            sqlConnection = new SqlConnection("Data Source = HOME-PC\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True");
             sqlConnection.Open();
 
             // Запрос к БД
@@ -49,11 +49,11 @@ namespace Demo
         public void SelectUsers()
         {
             // Соединение с БД
-            sqlConnection = new SqlConnection("Data Source = DESKTOP-QID17OI\\SQLEXPRESS01; Initial Catalog = agency; Integrated Security = True");
+            sqlConnection = new SqlConnection("Data Source = HOME-PC\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True");
             sqlConnection.Open();
 
             // Запрос к БД
-            sqlCommand = new SqlCommand("Select * From [User]", sqlConnection);
+            sqlCommand = new SqlCommand("Select * From Users", sqlConnection);
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
             if (sqlDataReader.HasRows)
@@ -118,6 +118,15 @@ namespace Demo
 
                     }
              else MessageBox.Show("Все данные должны быть заполнены", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            registr newForm = new registr();
+            newForm.ShowDialog();
+            Close();
 
         }
     }

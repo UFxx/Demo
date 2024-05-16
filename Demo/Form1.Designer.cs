@@ -108,6 +108,7 @@
             this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
             this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.регистрацияToolStripMenuItem.Text = "Регистрация";
+            this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 

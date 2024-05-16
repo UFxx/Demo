@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="registr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registr.Designer.cs">
+      <DependentUpon>registr.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPersonalAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registr.resx">
+      <DependentUpon>registr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPersonalAccount.resx">
       <DependentUpon>UserPersonalAccount.cs</DependentUpon>
     </EmbeddedResource>
