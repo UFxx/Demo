@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace Demo
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         List<AgencyWorker> workers = new List<AgencyWorker>();
         List<Users> users = new List<Users>();
         SqlCommand sqlCommand;
         SqlConnection sqlConnection;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
@@ -41,7 +41,6 @@ namespace Demo
                     workers.Add(new AgencyWorker(Convert.ToString(sqlDataReader[10]), Convert.ToString(sqlDataReader[11])));
                 }
             }
-
             sqlDataReader.Close();
         }
 
@@ -109,7 +108,7 @@ namespace Demo
                         }
                         else tempForUsers++;
                     }
-
+                    // Обработка ошибок
                     if (tempForWorkers == workers.Count && tempForUsers == users.Count)
                         {
                             MessageBox.Show("Неправильный логин или пароль", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -122,8 +121,9 @@ namespace Demo
 
         private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Открытие регистрации
             Hide();
-            registr newForm = new registr();
+            Registration newForm = new Registration();
             newForm.ShowDialog();
             Close();
 
@@ -131,11 +131,13 @@ namespace Demo
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Окно "О программе"
             MessageBox.Show("Программа разработана Студентом 3-ИС Добровольским Дмитрием", "О программе", MessageBoxButtons.OK);
         }
 
         private void loginAsGuest_Click(object sender, EventArgs e)
         {
+            // Вход как пользователь
             Hide();
             new GuestForm().ShowDialog();
             Close();

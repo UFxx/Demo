@@ -1,6 +1,6 @@
 ﻿namespace Demo
 {
-    partial class registr
+    partial class Registration
     {
         /// <summary>
         /// Required designer variable.
@@ -88,7 +88,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(18, 377);
+            this.label5.Location = new System.Drawing.Point(18, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 50);
             this.label5.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(403, 23);
+            this.label6.Location = new System.Drawing.Point(20, 362);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 50);
             this.label6.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(403, 110);
+            this.label7.Location = new System.Drawing.Point(417, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 50);
             this.label7.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(394, 223);
+            this.label8.Location = new System.Drawing.Point(408, 154);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 25);
             this.label8.TabIndex = 7;
@@ -129,7 +129,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(418, 306);
+            this.label9.Location = new System.Drawing.Point(432, 237);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 25);
             this.label9.TabIndex = 8;
@@ -139,7 +139,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(418, 396);
+            this.label10.Location = new System.Drawing.Point(432, 327);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 25);
             this.label10.TabIndex = 9;
@@ -174,7 +174,7 @@
             // textBoxBirthday
             // 
             this.textBoxBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxBirthday.Location = new System.Drawing.Point(131, 396);
+            this.textBoxBirthday.Location = new System.Drawing.Point(131, 300);
             this.textBoxBirthday.Name = "textBoxBirthday";
             this.textBoxBirthday.Size = new System.Drawing.Size(112, 30);
             this.textBoxBirthday.TabIndex = 14;
@@ -182,7 +182,7 @@
             // textBoxPassportSeries
             // 
             this.textBoxPassportSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassportSeries.Location = new System.Drawing.Point(507, 43);
+            this.textBoxPassportSeries.Location = new System.Drawing.Point(124, 382);
             this.textBoxPassportSeries.Name = "textBoxPassportSeries";
             this.textBoxPassportSeries.Size = new System.Drawing.Size(119, 30);
             this.textBoxPassportSeries.TabIndex = 15;
@@ -190,7 +190,7 @@
             // textBoxPassportNumber
             // 
             this.textBoxPassportNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassportNumber.Location = new System.Drawing.Point(507, 130);
+            this.textBoxPassportNumber.Location = new System.Drawing.Point(521, 61);
             this.textBoxPassportNumber.Name = "textBoxPassportNumber";
             this.textBoxPassportNumber.Size = new System.Drawing.Size(119, 30);
             this.textBoxPassportNumber.TabIndex = 16;
@@ -198,7 +198,7 @@
             // textBoxPhone
             // 
             this.textBoxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPhone.Location = new System.Drawing.Point(507, 223);
+            this.textBoxPhone.Location = new System.Drawing.Point(521, 154);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(119, 30);
             this.textBoxPhone.TabIndex = 17;
@@ -206,7 +206,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Location = new System.Drawing.Point(507, 300);
+            this.textBoxPassword.Location = new System.Drawing.Point(521, 231);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(119, 30);
             this.textBoxPassword.TabIndex = 18;
@@ -214,7 +214,7 @@
             // textBoxLogin
             // 
             this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLogin.Location = new System.Drawing.Point(507, 396);
+            this.textBoxLogin.Location = new System.Drawing.Point(521, 327);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(121, 30);
             this.textBoxLogin.TabIndex = 19;
@@ -222,7 +222,7 @@
             // button_registr
             // 
             this.button_registr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_registr.Location = new System.Drawing.Point(248, 454);
+            this.button_registr.Location = new System.Drawing.Point(252, 450);
             this.button_registr.Name = "button_registr";
             this.button_registr.Size = new System.Drawing.Size(169, 37);
             this.button_registr.TabIndex = 20;
@@ -249,7 +249,7 @@
             this.назадToolStripMenuItem.Text = "Назад";
             this.назадToolStripMenuItem.Click += new System.EventHandler(this.назадToolStripMenuItem_Click);
             // 
-            // registr
+            // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "registr";
+            this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.registr_Load);

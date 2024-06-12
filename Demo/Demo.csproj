@@ -63,11 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DemoDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="GuestForm.cs">
       <SubType>Form</SubType>
@@ -75,11 +75,11 @@
     <Compile Include="GuestForm.Designer.cs">
       <DependentUpon>GuestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="registr.cs">
+    <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registr.Designer.cs">
-      <DependentUpon>registr.cs</DependentUpon>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPersonalAccount.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GuestForm.resx">
       <DependentUpon>GuestForm.cs</DependentUpon>
@@ -111,8 +111,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="registr.resx">
-      <DependentUpon>registr.cs</DependentUpon>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPersonalAccount.resx">
       <DependentUpon>UserPersonalAccount.cs</DependentUpon>

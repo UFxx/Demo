@@ -12,9 +12,9 @@ using System.Xml.Linq;
 
 namespace Demo
 {
-    public partial class registr : Form
+    public partial class Registration : Form
     {
-        public registr()
+        public Registration()
         {
             InitializeComponent();
         }
@@ -101,7 +101,7 @@ namespace Demo
         private void назадToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
-            new Form1().ShowDialog();
+            new Login().ShowDialog();
             Close();
         }
 

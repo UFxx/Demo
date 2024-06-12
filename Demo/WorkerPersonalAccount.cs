@@ -80,7 +80,7 @@ namespace Demo
         private void назадToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
-            new Form1().ShowDialog();
+            new Login().ShowDialog();
             Close();
         }
     }
