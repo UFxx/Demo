@@ -63,7 +63,7 @@ namespace Demo
             string Password = textBoxPassword.Text;
             string Login = textBoxLogin.Text;
 
-            using (SqlConnection connection = new SqlConnection("Data Source = HOME-PC\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True"))
+            using (SqlConnection connection = new SqlConnection("Data Source = KOMPUTER\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True"))
             {
                 connection.Open();
 
@@ -94,6 +94,18 @@ namespace Demo
         }
 
         private void registr_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Form1().ShowDialog();
+            Close();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

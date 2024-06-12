@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,37 @@ namespace Demo
 
         private void WorkerPersonalAccount_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "demoDataSet2.Products". При необходимости она может быть перемещена или удалена.
+            this.productsTableAdapter.Fill(this.demoDataSet2.Products);
 
+        }
+
+        private void addProductButton_Click(object sender, EventArgs e)
+        {
+            string productName = productNameTextBox.Text;
+            string productCategory = productCategoryTextBox.Text;
+            string productDescription = productDescriptionTextBox.Text;
+
+            using (SqlConnection connection = new SqlConnection("Data Source = KOMPUTER\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True"))
+            {
+                connection.Open();
+
+                string sql = "INSERT INTO Products (ProductDescription, ProductName, ProductCategory) VALUES (@ProductDescription, @ProductName, @ProductCategory )";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@ProductDescription", productDescription);
+                command.Parameters.AddWithValue("@ProductName", productName);
+                command.Parameters.AddWithValue("@ProductCategory", productCategory);
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Товар добавлен!");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Ошибка регистрации: " + ex.Message);
+                }
+
+            }
         }
     }
 }

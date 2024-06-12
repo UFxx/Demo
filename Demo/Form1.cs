@@ -28,11 +28,11 @@ namespace Demo
         public void SelectWorkers()
         {
             // Соединение с БД
-            sqlConnection = new SqlConnection("Data Source = HOME-PC\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True");
+            sqlConnection = new SqlConnection("Data Source = KOMPUTER\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True");
             sqlConnection.Open();
 
             // Запрос к БД
-            sqlCommand = new SqlCommand("Select * From AgencyWorker", sqlConnection);
+            sqlCommand = new SqlCommand("Select * From Workers", sqlConnection);
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
             if (sqlDataReader.HasRows) 
@@ -49,7 +49,7 @@ namespace Demo
         public void SelectUsers()
         {
             // Соединение с БД
-            sqlConnection = new SqlConnection("Data Source = HOME-PC\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True");
+            sqlConnection = new SqlConnection("Data Source = KOMPUTER\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True");
             sqlConnection.Open();
 
             // Запрос к БД
@@ -128,6 +128,18 @@ namespace Demo
             newForm.ShowDialog();
             Close();
 
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа разработана Студентом 3-ИС Добровольским Дмитрием", "О программе", MessageBoxButtons.OK);
+        }
+
+        private void loginAsGuest_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new GuestForm().ShowDialog();
+            Close();
         }
     }
 }

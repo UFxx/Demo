@@ -39,6 +39,7 @@
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumbit_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loginAsGuest = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -116,11 +117,12 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(165, 30);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // sumbit_button
             // 
             this.sumbit_button.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sumbit_button.Location = new System.Drawing.Point(386, 515);
+            this.sumbit_button.Location = new System.Drawing.Point(423, 518);
             this.sumbit_button.Name = "sumbit_button";
             this.sumbit_button.Size = new System.Drawing.Size(107, 36);
             this.sumbit_button.TabIndex = 4;
@@ -138,12 +140,24 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // loginAsGuest
+            // 
+            this.loginAsGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.loginAsGuest.Location = new System.Drawing.Point(389, 560);
+            this.loginAsGuest.Name = "loginAsGuest";
+            this.loginAsGuest.Size = new System.Drawing.Size(161, 33);
+            this.loginAsGuest.TabIndex = 6;
+            this.loginAsGuest.Text = "Войти как гость";
+            this.loginAsGuest.UseVisualStyleBackColor = true;
+            this.loginAsGuest.Click += new System.EventHandler(this.loginAsGuest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
-            this.ClientSize = new System.Drawing.Size(919, 576);
+            this.ClientSize = new System.Drawing.Size(919, 618);
+            this.Controls.Add(this.loginAsGuest);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sumbit_button);
             this.Controls.Add(this.password_textbox);
@@ -153,6 +167,7 @@
             this.Controls.Add(this.login_label);
             this.Controls.Add(this.menuStrip2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
@@ -175,6 +190,7 @@
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.Button sumbit_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button loginAsGuest;
     }
 }
 
