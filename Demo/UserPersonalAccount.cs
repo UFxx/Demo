@@ -17,10 +17,6 @@ namespace Demo
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void UserPersonalAccount_Load(object sender, EventArgs e)
         {
@@ -29,10 +25,6 @@ namespace Demo
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void назадToolStripMenuItem1_Click(object sender, EventArgs e)
         {

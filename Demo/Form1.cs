@@ -22,7 +22,6 @@ namespace Demo
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-
         }
 
         public void SelectWorkers()

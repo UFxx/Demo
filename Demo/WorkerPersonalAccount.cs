@@ -30,7 +30,7 @@ namespace Demo
             string productName = productNameTextBox.Text;
             string productCategory = productCategoryTextBox.Text;
             string productDescription = productDescriptionTextBox.Text;
-
+               // Добавляем товар в таблицу
             using (SqlConnection connection = new SqlConnection("Data Source = KOMPUTER\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True"))
             {
                 connection.Open();
@@ -40,6 +40,7 @@ namespace Demo
                 command.Parameters.AddWithValue("@ProductDescription", productDescription);
                 command.Parameters.AddWithValue("@ProductName", productName);
                 command.Parameters.AddWithValue("@ProductCategory", productCategory);
+                // Обработка ошибки, если нет ошибки, то выводим окно "Товар добавлен!"
                 try
                 {
                     command.ExecuteNonQuery();
@@ -49,8 +50,38 @@ namespace Demo
                 {
                     MessageBox.Show("Ошибка регистрации: " + ex.Message);
                 }
-
+                dataGridView1 = new DataGridView();
             }
+        }
+
+        private void deleteProductButton_Click(object sender, EventArgs e)
+        {
+            string deleteProductID = deleteProductTextbox.Text;
+
+            using (SqlConnection connection = new SqlConnection("Data Source = KOMPUTER\\SQLEXPRESS; Initial Catalog = Demo; Integrated Security = True"))
+            {
+                connection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("DELETE FROM Products WHERE ID_product = @ID", connection);
+                sqlCommand.Parameters.AddWithValue("@ID", deleteProductID);
+                // Опять обработка ошибки
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Товар удален!");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Ошибка регистрации: " + ex.Message);
+                }
+            }
+        }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Form1().ShowDialog();
+            Close();
         }
     }
 }

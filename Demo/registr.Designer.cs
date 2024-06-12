@@ -277,7 +277,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "registr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "registr";
+            this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.registr_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

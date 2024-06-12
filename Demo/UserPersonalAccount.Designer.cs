@@ -39,7 +39,6 @@
             this.demoDataSet1 = new Demo.DemoDataSet1();
             this.productsTableAdapter = new Demo.DemoDataSet1TableAdapters.ProductsTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.назадToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.demoDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,6 +52,8 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDproductDataGridViewTextBoxColumn,
@@ -74,7 +75,7 @@
             this.iDproductDataGridViewTextBoxColumn.HeaderText = "ID_product";
             this.iDproductDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDproductDataGridViewTextBoxColumn.Name = "iDproductDataGridViewTextBoxColumn";
-            this.iDproductDataGridViewTextBoxColumn.Width = 125;
+            this.iDproductDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productDescriptionDataGridViewTextBoxColumn
             // 
@@ -82,7 +83,7 @@
             this.productDescriptionDataGridViewTextBoxColumn.HeaderText = "ProductDescription";
             this.productDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productDescriptionDataGridViewTextBoxColumn.Name = "productDescriptionDataGridViewTextBoxColumn";
-            this.productDescriptionDataGridViewTextBoxColumn.Width = 125;
+            this.productDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productNameDataGridViewTextBoxColumn
             // 
@@ -90,7 +91,7 @@
             this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
             this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.Width = 125;
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productCategoryDataGridViewTextBoxColumn
             // 
@@ -98,7 +99,7 @@
             this.productCategoryDataGridViewTextBoxColumn.HeaderText = "ProductCategory";
             this.productCategoryDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productCategoryDataGridViewTextBoxColumn.Name = "productCategoryDataGridViewTextBoxColumn";
-            this.productCategoryDataGridViewTextBoxColumn.Width = 125;
+            this.productCategoryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productsBindingSource
             // 
@@ -118,18 +119,12 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.назадToolStripMenuItem,
             this.назадToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // назадToolStripMenuItem
-            // 
-            this.назадToolStripMenuItem.Name = "назадToolStripMenuItem";
-            this.назадToolStripMenuItem.Size = new System.Drawing.Size(14, 24);
             // 
             // назадToolStripMenuItem1
             // 
@@ -172,7 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productCategoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem назадToolStripMenuItem1;
     }
 }
